@@ -36,7 +36,8 @@ public class PickupController : MonoBehaviour
     {
         // Recoger item cuando se apreta la tecla "E"
         Vector3 distanceToPlayer = player.position - transform.position;
-        if (!equipped && distanceToPlayer.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E) && !slotFull)
+        if (!equipped && distanceToPlayer.magnitude <= pickUpRange 
+            && Input.GetKeyDown(KeyCode.E) && !slotFull && !PlayerInfo.Instance.equiped)
             PickUp();
 
         // Soltar item si esta equipado y se presiona la tecla "Q"
@@ -48,6 +49,10 @@ public class PickupController : MonoBehaviour
     }
     private void PickUp()
     {
+        if (!PlayerInfo.Instance.SetItem(this))
+        {
+            return;
+        }
         equipped = true;
         isPlaced = false;
 
@@ -63,6 +68,7 @@ public class PickupController : MonoBehaviour
 
     private void Drop()
     {
+        PlayerInfo.Instance.DropItem();
         equipped = false;
         slotFull = false;
 
@@ -79,6 +85,7 @@ public class PickupController : MonoBehaviour
 
     private void Place()
     {
+        PlayerInfo.Instance.DropItem();
         equipped = false;
         isPlaced = true;
 
