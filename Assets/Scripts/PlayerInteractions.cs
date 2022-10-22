@@ -25,21 +25,37 @@ public class PlayerInteractions : MonoBehaviour
         // creamos un rayo para buscar objetos con los que se pueda interactuar
         RaycastHit hit;
         Ray interactionRay = new Ray(playerCamera.position, playerCamera.forward);
+        //bool interactionRaycast = Physics.Raycast(interactionRay, out hit, pickUpDistance, interactableLayerMask);
+        //bool itemFramesRaycast = Physics.Raycast(interactionRay, out hit, pickUpDistance, itemFramesLayerMask);
 
         Debug.DrawRay(playerCamera.position, playerCamera.forward * pickUpDistance, Color.red);
 
         // Recoger item
-        if (Input.GetKey(KeyCode.E) && !hasItem)
+        if (Input.GetKeyDown(KeyCode.E) && !hasItem && Physics.Raycast(interactionRay, out hit, pickUpDistance, interactableLayerMask))
         {
             // Si se encuentra un objeto con el cual se puede interactuar
-            if (Physics.Raycast(interactionRay, out hit, pickUpDistance, interactableLayerMask))
+            
+            
+            Debug.Log(hit.collider.gameObject.name);
+            pickupController = hit.transform.GetComponent<PickupController>();
+
+            if (pickupController.isPlaced)
             {
-                Debug.Log(hit.collider.gameObject.name);
-                pickupController = hit.transform.GetComponent<PickupController>();
+                var boxItem = hit.collider.GetComponent<BoxController>().TakeFromBox();
+                if (boxItem != null)
+                {
+                    pickupController = boxItem.GetComponent<PickupController>();
+                    pickupController.PickUp();
+                    hasItem = true;
+                }
+            }
+            else
+            {
                 pickupController.PickUp();
                 hasItem = true;
-
             }
+
+ 
         }
 
         // Soltar item
@@ -51,22 +67,20 @@ public class PlayerInteractions : MonoBehaviour
         }
 
         // Poner item en un item frame (ponerlo en la repisa)
-        if (Input.GetKey(KeyCode.F) && hasItem)
+        if (Input.GetKey(KeyCode.F) && hasItem && Physics.Raycast(interactionRay, out hit, pickUpDistance, itemFramesLayerMask))
         {
             // Notar que estamos buscando el frame en una capa distinta a la de los items interactuables.
             // Esto fue lo que se me ocurrió en el momento y no estoy seguro de que sea la mejor solución,
             // pero por ahora funciona
-            if (Physics.Raycast(interactionRay, out hit, pickUpDistance, itemFramesLayerMask))
-            {
 
-                // To Do: Quizas haya que implementar un controlador para los item frames para
-                // aplicar la logica de "desempaquetar" las cajas. Eso probablemente cambiaría esta lógica.
-                Debug.Log(hit.collider.gameObject.name);
-                var itemFrame = hit.transform;
-                pickupController.Place(itemFrame);
-                hasItem = false;
-                pickupController = null;
-            }
+            // To Do: Quizas haya que implementar un controlador para los item frames para
+            // aplicar la logica de "desempaquetar" las cajas. Eso probablemente cambiaría esta lógica.
+            Debug.Log(hit.collider.gameObject.name);
+            var itemFrame = hit.transform;
+            pickupController.Place(itemFrame);
+            hasItem = false;
+            pickupController = null;
+            
         }
     }
 }

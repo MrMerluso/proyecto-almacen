@@ -8,12 +8,10 @@ public class PickupController : MonoBehaviour
     public BoxCollider coll;
     public Transform player, itemContainer, cam;
 
-    public float pickUpRange;
     public float dropForwardForce, dropUpwardForce;
 
     
     public bool isPlaced;
-    public static bool slotFull;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +35,14 @@ public class PickupController : MonoBehaviour
     //    if (equipped && Input.GetKeyDown(KeyCode.F) && !isPlaced)
     //        Place();
     //}
+
+    // Probablemente una forma horrible de hacer esto, pero es lo que se me ocurrio xd
+    public void SetAttributes()
+    {
+        player = GameObject.FindWithTag("Player").transform;
+        cam = GameObject.FindWithTag("MainCamera").transform;
+        itemContainer = GameObject.FindWithTag("ItemHolder").transform;
+    }
 
     public void PickUp()
     {
