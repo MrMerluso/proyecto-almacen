@@ -67,7 +67,7 @@ public class PlayerInteractions : MonoBehaviour
         }
 
         // Poner item en un item frame (ponerlo en la repisa)
-        if (Input.GetKey(KeyCode.F) && hasItem && Physics.Raycast(interactionRay, out hit, pickUpDistance, itemFramesLayerMask))
+        if (Input.GetKey(KeyCode.F) && hasItem && Physics.Raycast(interactionRay, out hit, pickUpDistance, interactableLayerMask))
         {
             // Notar que estamos buscando el frame en una capa distinta a la de los items interactuables.
             // Esto fue lo que se me ocurrió en el momento y no estoy seguro de que sea la mejor solución,
