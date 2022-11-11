@@ -67,14 +67,18 @@ public class PlayerInteractions : MonoBehaviour
         }
 
         // Poner item en un item frame (ponerlo en la repisa)
-        if (Input.GetKey(KeyCode.F) && hasItem && Physics.Raycast(interactionRay, out hit, pickUpDistance, interactableLayerMask))
+        if (Input.GetKey(KeyCode.F) && hasItem && Physics.Raycast(interactionRay, out hit, pickUpDistance, itemFramesLayerMask))
         {
             // Notar que estamos buscando el frame en una capa distinta a la de los items interactuables.
-            // Esto fue lo que se me ocurrió en el momento y no estoy seguro de que sea la mejor solución,
+            // Esto fue lo que se me ocurriÃ³ en el momento y no estoy seguro de que sea la mejor soluciï¿½n,
             // pero por ahora funciona
+            //
+            // UPDATE: cuando tome la decision de hacer el raycast en capas distintas, solo dios y yo
+            // sabbÃ­amos lo que estabamos haciendo y por alguna razon ninguno de los dos pensÃ³ en comentar
+            // el razonamiento detrÃ¡s de esa desiciÃ³n. Ahora, solo dios sabe el por quÃ©...
 
             // To Do: Quizas haya que implementar un controlador para los item frames para
-            // aplicar la logica de "desempaquetar" las cajas. Eso probablemente cambiaría esta lógica.
+            // aplicar la logica de "desempaquetar" las cajas. Eso probablemente cambiarï¿½a esta lï¿½gica.
             Debug.Log(hit.collider.gameObject.name);
             var itemFrame = hit.transform;
             pickupController.Place(itemFrame);

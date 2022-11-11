@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354326918694250591}
   m_LocalRotation: {x: 0, y: -0.16103736, z: 0, w: 0.9869483}
-  m_LocalPosition: {x: -10.08, y: 0.431, z: -6.97}
+  m_LocalPosition: {x: -3.932, y: 1.429, z: -13.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -134,7 +134,7 @@ MonoBehaviour:
   player: {fileID: 0}
   itemContainer: {fileID: 0}
   cam: {fileID: 0}
-  dropForwardForce: 10
+  dropForwardForce: 5
   dropUpwardForce: 1
   isPlaced: 0
 --- !u!114 &2583417592419956456
@@ -149,9 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a244e3139b83ff4aa29904c6ad7bdb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  box: {fileID: 354326918694250591}
-  boxContent: {fileID: 0}
-  boxContentAmmount: 3
+  boxContent: {fileID: 6288174197152612051, guid: 2a091eebd74c5e54f83ea72bb013226f, type: 3}
+  boxContentAmmount: 10
 --- !u!1 &2145607267939143399
 GameObject:
   m_ObjectHideFlags: 0

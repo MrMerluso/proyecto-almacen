@@ -14,9 +14,8 @@ public class PickupController : MonoBehaviour
     public bool isPlaced;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Awake(){
+        SetAttributes();
     }
 
     // Update is called once per frame
