@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoxController : MonoBehaviour
 {
-    public GameObject box;
+    //public GameObject box;
     public GameObject boxContent;
     public int boxContentAmmount;
 
@@ -25,11 +25,11 @@ public class BoxController : MonoBehaviour
 
         //}
         var item = Instantiate(boxContent);
-        item.GetComponent<PickupController>().SetAttributes();
+        // item.GetComponent<PickupController>().SetAttributes();
         boxContentAmmount--;
         if (boxContentAmmount < 1)
         {
-            Destroy(box);
+            Destroy(gameObject);
         }
         return item;
     }

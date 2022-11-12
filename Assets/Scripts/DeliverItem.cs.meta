@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/DeliverItem.cs.meta
 guid: e4a2ddfca5da04446b8e3d57874ba4eb
+========
+guid: 6fa3704d12533c7488d2b64a320671e7
+>>>>>>>> 497e2db0e33af9e7c50384154a7917342909d891:Assets/Scripts/ShopItemSO.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

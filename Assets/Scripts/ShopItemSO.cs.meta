@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Scripts/OrderDetail.cs.meta
-guid: 8443ae8d2ac4deb4ebd1fea1f21afe2c
+<<<<<<<< HEAD:Assets/Scripts/DeliverItem.cs.meta
+guid: b0959f12d7970fe4a806d6c2925a3f9d
 ========
-guid: 68525bbee3c4d104db568e446cac8f2b
->>>>>>>> 497e2db0e33af9e7c50384154a7917342909d891:Assets/Scripts/ShopManager.cs.meta
+guid: 6fa3704d12533c7488d2b64a320671e7
+>>>>>>>> 497e2db0e33af9e7c50384154a7917342909d891:Assets/Scripts/ShopItemSO.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

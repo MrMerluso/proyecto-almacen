@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Materials/New Material 1.mat.meta
+guid: 107f83d7960988f46a66e7298796218a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+========
+guid: 827ac44667a876f4bb67f9e9c630c449
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+>>>>>>>> 497e2db0e33af9e7c50384154a7917342909d891:Assets/ScriptableObjects/BurguerBox.asset.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
