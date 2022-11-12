@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 528472517424565166}
   - component: {fileID: 528472517424565165}
   - component: {fileID: 528472517424565164}
+  - component: {fileID: 1330364349094076563}
   m_Layer: 6
   m_Name: Hamburger
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,3 +141,16 @@ MonoBehaviour:
   dropForwardForce: 10
   dropUpwardForce: 2
   isPlaced: 0
+--- !u!114 &1330364349094076563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528472516807506101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84e641840f6fa749bc226cc73e46c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProductName: Hamburguesa
