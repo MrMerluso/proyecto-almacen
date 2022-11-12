@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Object
+  - ItemHolder
+  - BoxSpawnPoint
   layers:
   - Default
   - TransparentFX
