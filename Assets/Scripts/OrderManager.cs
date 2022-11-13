@@ -11,6 +11,8 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
     public static List<string> ComlpetedOrders = new List<string>();
     public static List<string> FailedOrders = new List<string>();
 
+    public static List<GameObject> Clients;
+
     public static float Money = 0;
 
 
@@ -22,6 +24,17 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
         Money = 0;
     }
 
+
+    public static void MakeClients()
+    {
+        foreach (var client in Clients)
+        {
+            if (!client.activeInHierarchy)
+            {
+                client.GetComponent<ClientController>().TrySpawnClient("pedido");
+            }
+        }
+    }
     public static void AddOrder(OrderDetail od)
     {
         AllOrders.Add(od);
