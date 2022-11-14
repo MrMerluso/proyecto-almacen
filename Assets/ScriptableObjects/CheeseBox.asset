@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fa3704d12533c7488d2b64a320671e7, type: 3}
+  m_Script: {fileID: 11500000, guid: b0959f12d7970fe4a806d6c2925a3f9d, type: 3}
   m_Name: CheeseBox
   m_EditorClassIdentifier: 
-  itemName: Caja de Quesos
-  itemPrice: 6000
+  itemName: Caja de queso
+  itemPrice: 300
   Box: {fileID: 354326918694250591, guid: f6cf5eea846a8f14b8e15e0a9ee42221, type: 3}
   BoxContents: {fileID: 642190040298250734, guid: ff6c1f4e48c88c847b56063a9eeb6e37, type: 3}

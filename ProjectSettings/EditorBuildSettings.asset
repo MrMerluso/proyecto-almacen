@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: "Assets/Scenes/Men\xFA.unity"
+    guid: 84dd9864cd8aa854cb72891858607ca3
+  - enabled: 1
+    path: Assets/Scenes/Reglas del juego.unity
+    guid: 3e00610deb7ef754586d1bb77c6ab193
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

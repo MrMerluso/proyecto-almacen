@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fa3704d12533c7488d2b64a320671e7, type: 3}
+  m_Script: {fileID: 11500000, guid: b0959f12d7970fe4a806d6c2925a3f9d, type: 3}
   m_Name: BurguerBox
   m_EditorClassIdentifier: 
-  itemName: Caja de Hamburguesas
-  itemPrice: 5000
+  itemName: Caja de hamburguesa
+  itemPrice: 500
   Box: {fileID: 354326918694250591, guid: f6cf5eea846a8f14b8e15e0a9ee42221, type: 3}
   BoxContents: {fileID: 528472516807506101, guid: 2329c33573c3fb74e8efb753d41cebb8, type: 3}
