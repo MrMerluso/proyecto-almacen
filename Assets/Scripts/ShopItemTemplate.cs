@@ -13,6 +13,12 @@ public class ShopItemTemplate : MonoBehaviour
 
     public void PurchaseItem()
     {
+        
+        if (int.Parse(ItemPrice.text) >= (int)OrderManager.Money)
+        {
+            return;
+        }
+
         Box.GetComponent<BoxController>().boxContent = BoxContent;
         Box.GetComponent<BoxController>().boxContentAmmount = 10;
 

@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemDetail : MonoBehaviour
+public class ClientSpawnpoint : MonoBehaviour
 {
-    public string ProductName;
-    
+    public bool isAvailible = true;
 }

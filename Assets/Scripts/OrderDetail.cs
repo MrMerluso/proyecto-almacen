@@ -15,8 +15,8 @@ public class OrderDetail : MonoBehaviour
     }
     public OrderData _orderData = new OrderData();
 
-    public bool _isServed; //bool para cachar si se sirvió la orden
-    public bool _isExpired; //bool para cachar si la orden expiró
+    public bool _isServed; //bool para cachar si se sirviï¿½ la orden
+    public bool _isExpired; //bool para cachar si la orden expirï¿½
     public float _Timer;
 
     public TMP_Text OrderIDText;
@@ -25,7 +25,7 @@ public class OrderDetail : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InitOrder(_orderData);
+        // InitOrder(_orderData);
         OrderManager.AddOrder(this);
     }
 
@@ -34,6 +34,7 @@ public class OrderDetail : MonoBehaviour
         _orderData._orderId = newData._orderId;
         OrderIDText.text = _orderData._orderId.ToString();
         OrderProductText.text = _orderData._orderProduct = newData._orderProduct;
+        _orderData._price = newData._price;
         _orderData._orderTime = newData._orderTime;
         _isExpired = false;
         _isServed = false;

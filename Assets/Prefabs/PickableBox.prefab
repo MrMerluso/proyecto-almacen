@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 354326919855941615}
   - component: {fileID: 2583417592419956456}
   m_Layer: 6
-  m_Name: PickableBox (2)
+  m_Name: PickableBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a244e3139b83ff4aa29904c6ad7bdb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxContent: {fileID: 6288174197152612051, guid: 2a091eebd74c5e54f83ea72bb013226f, type: 3}
+  boxContent: {fileID: 528472516807506101, guid: 2329c33573c3fb74e8efb753d41cebb8, type: 3}
   boxContentAmmount: 10
 --- !u!1 &2145607267939143399
 GameObject:
