@@ -13,11 +13,19 @@ public class ShopItemTemplate : MonoBehaviour
 
     public void PurchaseItem()
     {
+        
+        if (int.Parse(ItemPrice.text) >= (int)OrderManager.Money)
+        {
+            return;
+        }
+
         Box.GetComponent<BoxController>().boxContent = BoxContent;
         Box.GetComponent<BoxController>().boxContentAmmount = 10;
+        Box.GetComponent<BoxController>().boxText.text = ItemName.text;
 
         BoxSpawnPoint = GameObject.FindGameObjectWithTag("BoxSpawnPoint").transform;
         Box.transform.position = BoxSpawnPoint.position;
+        OrderManager.Money -= float.Parse(ItemPrice.text);
 
         Instantiate(Box);
 

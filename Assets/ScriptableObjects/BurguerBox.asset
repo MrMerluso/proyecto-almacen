@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BurguerBox
   m_EditorClassIdentifier: 
   itemName: Caja de hamburguesa
-  itemPrice: 500
+  itemPrice: 4500
   Box: {fileID: 354326918694250591, guid: f6cf5eea846a8f14b8e15e0a9ee42221, type: 3}
   BoxContents: {fileID: 528472516807506101, guid: 2329c33573c3fb74e8efb753d41cebb8, type: 3}

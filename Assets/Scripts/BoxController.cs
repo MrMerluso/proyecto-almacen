@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BoxController : MonoBehaviour
 {
     //public GameObject box;
     public GameObject boxContent;
     public int boxContentAmmount;
+    public TMP_Text boxText;
 
     public GameObject TakeFromBox()
     {

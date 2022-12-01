@@ -9,11 +9,19 @@ public class ShopTriggerCollider : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        ShopManager.Show();
+        if (other.tag == "Player")
+        {
+            ShopManager.Show();
+        }
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
-        ShopManager.Hide();
+        if (other.tag == "Player")
+        {
+            ShopManager.Hide();
+        }
+            
     }
 }

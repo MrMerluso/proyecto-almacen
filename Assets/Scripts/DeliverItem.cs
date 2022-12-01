@@ -15,8 +15,8 @@ public class DeliverItem : MonoBehaviour
             ItemDetail item = other.gameObject.GetComponent<ItemDetail>(); 
             if(item != null)
             {
-                OrderManager.CheckOrder(item.ProductName);
-                Destroy(item.gameObject);
+                OrderManager.CheckOrder(item);
+                
             }
         }
     }

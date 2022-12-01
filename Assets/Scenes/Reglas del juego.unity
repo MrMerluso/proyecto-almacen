@@ -292,14 +292,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.85
+  m_fontSize: 68.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36.6
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -571,7 +571,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05823753, y: 0.019682137}
   m_AnchorMax: {x: 0.36314735, y: 0.64416003}
-  m_AnchoredPosition: {x: 320, y: 27}
+  m_AnchoredPosition: {x: 691, y: 27}
   m_SizeDelta: {x: 3.0463867, y: -0.30929565}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388084180
@@ -1060,7 +1060,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34.8
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1147,7 +1147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05823753, y: 0.019682137}
   m_AnchorMax: {x: 0.36314735, y: 0.64416003}
-  m_AnchoredPosition: {x: -1.5232239, y: 27}
+  m_AnchoredPosition: {x: -1.5231934, y: 27}
   m_SizeDelta: {x: 3.0464, y: -0.30929857}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1053287220
@@ -1225,7 +1225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.771168, y: 0.108}
   m_AnchorMax: {x: 0.93670803, y: 0.1776801}
-  m_AnchoredPosition: {x: 0.77905273, y: 43}
+  m_AnchoredPosition: {x: 0.77905273, y: 103}
   m_SizeDelta: {x: -0.44180298, y: -3.2371979}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1164972623
@@ -1685,10 +1685,10 @@ RectTransform:
   m_Father: {fileID: 388084179}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.192}
-  m_AnchorMin: {x: 0, y: 0.08523449}
-  m_AnchorMax: {x: 1, y: 0.64231735}
-  m_AnchoredPosition: {x: -19.4593, y: 22.0725}
-  m_SizeDelta: {x: -57.7991, y: -24.1171}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.72300005}
+  m_AnchoredPosition: {x: -19.4593, y: 67.5}
+  m_SizeDelta: {x: -57.7991, y: -135.1171}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1854801946
 MonoBehaviour:
@@ -1711,8 +1711,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "-Tienes que atender las ordenes de los clientes, donde vas a generar dinero
-    por cada orden entregada\n-Puedes comprar cajas con productos \n-Perder\xE1s
-    al no realizar 3 ordenes\n-Intenta llegar lo m\xE1s lejos posible"
+    por cada orden entregada\n-A los clientes caf\xE9s tienes que entregarle una
+    hamburguesa\n-A los clientes rojos tienes que entregarle un completo\n-A los
+    clientes amarillos tienes que entregarle un queso\n-Puedes comprar cajas con
+    productos acerc\xE1ndote al cami\xF3n\n-Las cajas de productos se ponen encima
+    de las cajas rojas dentro del almac\xE9n\n-Perder\xE1s al no realizar 3 ordenes\n-Intenta
+    llegar lo m\xE1s lejos posible"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1739,10 +1743,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
+  m_fontSize: 28.05
   m_fontSizeBase: 15
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1775,7 +1779,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -18.509735, w: -33.673164}
+  m_margin: {x: 0, y: 0, z: -18.509735, w: -131.46402}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1848,7 +1852,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "-Te mueves con \"ASDW\" \n-Agarras objetos con \"E\"\n-Botas objetos con
-    \"Q\"\n-Bot\xF3n de Interacci\xF3n \"F\""
+    \"Q\"\n-Bot\xF3n de Interacci\xF3n \"F\"\n-Puedes correr con \"SHIFT\"\n-Puedes
+    saltar con \"Espacio\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1875,8 +1880,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 36.2
+  m_fontSizeBase: 36.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

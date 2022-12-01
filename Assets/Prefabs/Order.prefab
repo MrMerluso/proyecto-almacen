@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.30731013, y: 0.080000006}
   m_AnchorMax: {x: 0.9168736, y: 0.33665365}
-  m_AnchoredPosition: {x: -0.22130013, y: -0.20000076}
+  m_AnchoredPosition: {x: -0.22129822, y: -0.19999695}
   m_SizeDelta: {x: -0.40670013, y: -0.2840004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1867045869472776707
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.4
+  m_fontSize: 27.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -170,7 +170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.052563272, y: 0.7216732}
   m_AnchorMax: {x: 0.9168736, y: 0.9766537}
-  m_AnchoredPosition: {x: 0.06470108, y: -0.07859993}
+  m_AnchoredPosition: {x: 0.064704895, y: -0.07859802}
   m_SizeDelta: {x: -0.4245987, y: -0.2840004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1867045870007183728
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.25
+  m_fontSize: 27.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -312,7 +312,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 129.5611, y: 85.6665}
+  m_SizeDelta: {x: 0, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1867045870685732330
 CanvasRenderer:
@@ -444,7 +444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.052563272, y: 0.46500003}
   m_AnchorMax: {x: 0.9168736, y: 0.7216732}
-  m_AnchoredPosition: {x: 0.21229935, y: 0.3619995}
+  m_AnchoredPosition: {x: 0.21230316, y: 0.3619995}
   m_SizeDelta: {x: -0.4245987, y: -0.2840004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1867045870733684658
@@ -502,7 +502,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.4
+  m_fontSize: 27.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

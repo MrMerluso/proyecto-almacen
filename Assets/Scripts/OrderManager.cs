@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class OrderManager : MonoBehaviour //este Script va asociado a un gameObject vacio que va a funcionar como manager de las ordenes y eventos
 {
@@ -11,10 +13,38 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
     public static List<string> ComlpetedOrders = new List<string>();
     public static List<string> FailedOrders = new List<string>();
 
-    public static List<GameObject> Clients;
+    // TratÃ© de hacerlo un singleton pero no funcionÃ³
+    public ClientManager ClientManager;
+
+    // Esta es una forma horrible de hacer esto, pero han forzado mi mano
+    public List<string> PorductNames;
+    public List<float> ProductPrices;
+    private int orderID = 1;
+
 
     public static float Money = 0;
+    public static float totalMoney = 0;
+    private float time = 0;
+    private float newOrderTime = 5;
 
+    public RectTransform Order;
+    public RectTransform OrderQueue;
+
+    public static float timer = 0;
+    static bool isRunning = true;
+
+
+    private void Awake() 
+    {
+        
+        if (_instance == null)
+        {
+            _instance = this;
+        }else if(_instance !=this)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public static void Restart()
     {
@@ -22,19 +52,54 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
         ComlpetedOrders = new List<string>();
         FailedOrders = new List<string>();
         Money = 0;
+        totalMoney = 0;
+        timer = 0;
     }
 
 
-    public static void MakeClients()
+    void Start(){
+        InvokeRepeating("CreateOrder", 3.0f, newOrderTime);
+    }
+    private void Update()
     {
-        foreach (var client in Clients)
+        
+        if (FailedOrders.Count == 3)
         {
-            if (!client.activeInHierarchy)
-            {
-                client.GetComponent<ClientController>().TrySpawnClient("pedido");
-            }
+            isRunning = false;
+            SceneManager.LoadScene(3);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        if (isRunning)
+        {
+            timer += Time.deltaTime;
         }
     }
+    // Creamos una orden con detalles al azar
+    public void CreateOrder(){
+
+        if (!ClientManager.CheckAvalibleSpawns())
+        {
+            return;
+        }
+
+        var OrderInstance = Instantiate(Order);
+        var OrderData = new OrderDetail.OrderData();
+        int rndIt = Random.Range(0, PorductNames.Count);
+
+        OrderData._orderId = orderID++;
+        OrderData._orderProduct = PorductNames[rndIt];
+        OrderData._price = ProductPrices[rndIt];
+        OrderData._orderTime = 30;
+
+        
+        OrderInstance.GetComponent<OrderDetail>()?.InitOrder(OrderData);
+        ClientManager.SpawnClient(OrderInstance.GetComponent<OrderDetail>());
+
+        OrderInstance.SetParent(OrderQueue);
+    }
+
+
     public static void AddOrder(OrderDetail od)
     {
         AllOrders.Add(od);
@@ -46,19 +111,23 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
         {
             ComlpetedOrders.Add(od._orderData._orderProduct);
             Money += od._orderData._price;
+            totalMoney += od._orderData._price;
         }
         else
         {
             FailedOrders.Add(od._orderData._orderProduct);
         }
     }
-    public static void CheckOrder(string productName)
+    public static void CheckOrder(ItemDetail item)
     {
+
+        
         foreach(OrderDetail od in AllOrders)
         {
-            if(od._orderData._orderProduct == productName)
+            if(od._orderData._orderProduct == item.ProductName)
             {
                 RemoveOrder(od);
+                Destroy(item.gameObject);
                 Destroy(od.gameObject);
                 return;
             }
@@ -68,21 +137,12 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
     {
         return (int)Money;
     }
-    private void Awake() 
-    {
-        if (_instance == null)
-        {
-            _instance = this;
-        }else if(_instance !=this)
-        {
-            Destroy(gameObject);
-        }
-    }
 
+/* 
     // Start is called before the first frame update
     void Start()
     {
-        //condición para que empiece a generar ordenes (más adelante tiene que ser en el período de recreos)
+        //condiciï¿½n para que empiece a generar ordenes (mï¿½s adelante tiene que ser en el perï¿½odo de recreos)
         StartGenerateOrders();
     }
 
@@ -94,7 +154,7 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
     
     private IEnumerator GenerateOrder()
     {
-        //condición para que empiece a generar ordenes (más adelante tiene que ser en el período de recreos)
+        //condiciï¿½n para que empiece a generar ordenes (mï¿½s adelante tiene que ser en el perï¿½odo de recreos)
         while (true)
         {
             yield return new WaitForSeconds(5); //cada x cantidad de segundos
@@ -108,4 +168,5 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
     {
         
     }
+ */
 }
