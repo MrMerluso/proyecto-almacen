@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/Scenes/Men\xFA.unity"
+    path: "Assets/Scenes/Escenas Oficiales/Men\xFA.unity"
     guid: 84dd9864cd8aa854cb72891858607ca3
   - enabled: 1
-    path: Assets/Scenes/Reglas del juego.unity
+    path: Assets/Scenes/Escenas Oficiales/Reglas del juego.unity
     guid: 3e00610deb7ef754586d1bb77c6ab193
   - enabled: 1
-    path: Assets/Scenes/ClientTesting.unity
+    path: Assets/Scenes/Escenas Oficiales/ClientTesting.unity
     guid: 3dc5cec03499c47478687f79fb3a87c5
   - enabled: 1
-    path: Assets/Scenes/Game Over.unity
+    path: Assets/Scenes/Escenas Oficiales/Game Over.unity
     guid: c4bb97dd0f576ea459d0d629f011b466
   m_configObjects: {}

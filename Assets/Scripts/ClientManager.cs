@@ -40,15 +40,15 @@ public class ClientManager : MonoBehaviour
                 spawn.isAvailible = false;
                 if (OrderDetail._orderData._orderProduct == "Hamburguesa")
                 {
-                    ClientInstance.gameObject.GetComponent<MeshRenderer>().material.color = new Color32(139, 69, 19,255);
+                    ClientInstance.gameObject.GetComponentInChildren<MeshRenderer>().material.color = new Color32(139, 69, 19,255);
                 }
                 if (OrderDetail._orderData._orderProduct == "Queso")
                 {
-                    ClientInstance.gameObject.GetComponent<MeshRenderer>().material.color = Color.yellow;
+                    ClientInstance.gameObject.GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;
                 }
                 if (OrderDetail._orderData._orderProduct == "Completo")
                 {
-                    ClientInstance.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+                    ClientInstance.gameObject.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
                 }
                 return;
             }
