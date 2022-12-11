@@ -19,18 +19,24 @@ public class Client : MonoBehaviour
     // Necesito esto para poner el spawnpoint como disponible cuando se 
     // termine el pedido
     public ClientSpawnpoint Spawnpoint;
+    private ClientNavigation navigation;
     
     public string productRequested;
     public bool isSpawned = false;
+
+    void Awake()
+    {
+        this.navigation = GetComponent<ClientNavigation>();
+    }
 
     void Update()
     {
         // si la orden expira, eliminar cliente y habilitar spawn
         if (OrderDetail != null && OrderDetail._isExpired)
         {
-            
             Spawnpoint.isAvailible = true;
-            Destroy(gameObject);
+            OrderManager.currentWaveSize--;
+            navigation.SetDestination(Spawnpoint.transform);
         }
     }
 
@@ -45,11 +51,14 @@ public class Client : MonoBehaviour
             if (item.ProductName == OrderDetail._orderData._orderProduct)
             {
                 OrderManager.CheckOrder(item);
+                OrderManager.currentWaveSize--;
                 Spawnpoint.isAvailible = true;
-                Destroy(gameObject);
+                navigation.SetDestination(Spawnpoint.transform);
             }
         }
     }
+
+
 
 
 

@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxContent: {fileID: 6288174197152612051, guid: 2a091eebd74c5e54f83ea72bb013226f, type: 3}
-  boxContentAmmount: 10
+  boxContentAmmount: 5
   boxText: {fileID: 7925663105843323455}
 --- !u!1 &2145607267939143399
 GameObject:

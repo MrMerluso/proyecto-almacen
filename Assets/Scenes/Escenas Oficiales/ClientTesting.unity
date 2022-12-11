@@ -268,8 +268,8 @@ MonoBehaviour:
   - {fileID: 663086707}
   - {fileID: 1545073140}
   - {fileID: 347557811}
-  Client: {fileID: 1574845446659869697, guid: 1aee968f45c6e834b807a82bc2bc7c37, type: 3}
-  meshRenderer: {fileID: 8703674603859407906, guid: 02bceaa36dad36b43a4a0f323e28bacd, type: 3}
+  ClientDestinations: []
+  Client: {fileID: 8703674603859408860, guid: 02bceaa36dad36b43a4a0f323e28bacd, type: 3}
 --- !u!4 &125945584
 Transform:
   m_ObjectHideFlags: 0
@@ -1414,6 +1414,7 @@ MonoBehaviour:
   - 500
   - 300
   - 600
+  clientMaxWaveSize: 10
   Order: {fileID: 1867045870685732341, guid: c50426370926f7e489cb6c57735a89f1, type: 3}
   OrderQueue: {fileID: 1794572700}
 --- !u!4 &1542724664

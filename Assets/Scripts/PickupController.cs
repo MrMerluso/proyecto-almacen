@@ -18,23 +18,6 @@ public class PickupController : MonoBehaviour
         SetAttributes();
     }
 
-    // Update is called once per frame
-    //void Update()
-    //{
-    //    // Recoger item cuando se apreta la tecla "E"
-    //    Vector3 distanceToPlayer = player.position - transform.position;
-    //    if (!equipped && distanceToPlayer.magnitude <= pickUpRange 
-    //        && Input.GetKeyDown(KeyCode.E) && !slotFull && !PlayerInfo.Instance.equiped)
-    //        PickUp();
-
-    //    // Soltar item si esta equipado y se presiona la tecla "Q"
-    //    if (equipped && Input.GetKeyDown(KeyCode.Q))
-    //        Drop();
-
-    //    if (equipped && Input.GetKeyDown(KeyCode.F) && !isPlaced)
-    //        Place();
-    //}
-
     // Probablemente una forma horrible de hacer esto, pero es lo que se me ocurrio xd
     public void SetAttributes()
     {

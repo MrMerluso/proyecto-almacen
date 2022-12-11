@@ -25,13 +25,18 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
     public static float Money = 0;
     public static float totalMoney = 0;
     private float time = 0;
-    private float newOrderTime = 5;
+    private float newOrderTime = 4;
+    // cantidad máxima de clientes a spawnear
+    public static int clientMaxWaveSize = 6;
+    // Cantidad de clientes que se encuentran actualmente en el mapa
+    public static int currentWaveSize = 0;
 
     public RectTransform Order;
     public RectTransform OrderQueue;
 
     public static float timer = 0;
     static bool isRunning = true;
+    
 
 
     private void Awake() 
@@ -60,6 +65,7 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
     void Start(){
         InvokeRepeating("CreateOrder", 3.0f, newOrderTime);
     }
+
     private void Update()
     {
         
@@ -75,11 +81,18 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
             timer += Time.deltaTime;
         }
     }
+
     // Creamos una orden con detalles al azar
     public void CreateOrder(){
 
-        if (!ClientManager.CheckAvalibleSpawns())
-        {
+        // if (!ClientManager.CheckAvalibleSpawns())
+        // {
+        //     return;
+        // }
+
+        Debug.Log("Tring to create an order...");
+
+        if (currentWaveSize >= clientMaxWaveSize){
             return;
         }
 
@@ -90,11 +103,13 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
         OrderData._orderId = orderID++;
         OrderData._orderProduct = PorductNames[rndIt];
         OrderData._price = ProductPrices[rndIt];
-        OrderData._orderTime = 30;
+        OrderData._orderTime = 35;
 
         
         OrderInstance.GetComponent<OrderDetail>()?.InitOrder(OrderData);
         ClientManager.SpawnClient(OrderInstance.GetComponent<OrderDetail>());
+
+        currentWaveSize++;
 
         OrderInstance.SetParent(OrderQueue);
     }
@@ -104,6 +119,7 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
     {
         AllOrders.Add(od);
     }
+
     public static void RemoveOrder(OrderDetail od, bool success = true)
     {
         AllOrders.Remove(od);
@@ -118,6 +134,7 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
             FailedOrders.Add(od._orderData._orderProduct);
         }
     }
+
     public static void CheckOrder(ItemDetail item)
     {
 
@@ -138,35 +155,4 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
         return (int)Money;
     }
 
-/* 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //condici�n para que empiece a generar ordenes (m�s adelante tiene que ser en el per�odo de recreos)
-        StartGenerateOrders();
-    }
-
-    private void StartGenerateOrders()
-    {
-        StartCoroutine(GenerateOrder());
-    }
-
-    
-    private IEnumerator GenerateOrder()
-    {
-        //condici�n para que empiece a generar ordenes (m�s adelante tiene que ser en el per�odo de recreos)
-        while (true)
-        {
-            yield return new WaitForSeconds(5); //cada x cantidad de segundos
-            //Order = new OrderStruct();
-            
-            //ver como vincular la orden a un producto (hamburguesa) con OrderItem.cs
-        }
-    }
-
-    public struct OrderStruct
-    {
-        
-    }
- */
 }

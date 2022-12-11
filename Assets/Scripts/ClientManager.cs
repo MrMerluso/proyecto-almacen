@@ -7,8 +7,8 @@ public class ClientManager : MonoBehaviour
     
     [SerializeField]
     public List<ClientSpawnpoint> Spawnpoints;
+    public List<Transform> ClientDestinations;
     public Client Client;
-    public MeshRenderer meshRenderer;
 
 
     public bool CheckAvalibleSpawns()
@@ -37,7 +37,13 @@ public class ClientManager : MonoBehaviour
                 ClientInstance.Spawnpoint = spawn;
                 ClientInstance.transform.position = spawn.transform.position;
                 ClientInstance.isSpawned = true;
-                spawn.isAvailible = false;
+                // spawn.isAvailible = false;
+
+                int randomIndex = Random.Range(0, ClientDestinations.Count);
+                ClientInstance.GetComponentInChildren<ClientNavigation>().SetDestination(ClientDestinations[randomIndex]);
+
+
+
                 if (OrderDetail._orderData._orderProduct == "Hamburguesa")
                 {
                     ClientInstance.gameObject.GetComponentInChildren<MeshRenderer>().material.color = new Color32(139, 69, 19,255);
