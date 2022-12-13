@@ -20,13 +20,15 @@ public class Client : MonoBehaviour
     // termine el pedido
     public ClientSpawnpoint Spawnpoint;
     private ClientNavigation navigation;
+
+    public AudioSource purchaseSound;
     
-    public string productRequested;
     public bool isSpawned = false;
 
     void Awake()
     {
         this.navigation = GetComponent<ClientNavigation>();
+        this.purchaseSound = GameObject.FindGameObjectWithTag("PurchaseSound").GetComponent<AudioSource>();
     }
 
     void Update()
@@ -52,6 +54,7 @@ public class Client : MonoBehaviour
             {
                 OrderManager.CheckOrder(item);
                 OrderManager.currentWaveSize--;
+                purchaseSound.Play();
                 Spawnpoint.isAvailible = true;
                 navigation.SetDestination(Spawnpoint.transform);
             }

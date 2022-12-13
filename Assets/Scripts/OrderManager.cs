@@ -25,9 +25,9 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
     public static float Money = 0;
     public static float totalMoney = 0;
     private float time = 0;
-    private float newOrderTime = 4;
+    private float newOrderTime = 3;
     // cantidad máxima de clientes a spawnear
-    public static int clientMaxWaveSize = 6;
+    public static int clientMaxWaveSize = 99;
     // Cantidad de clientes que se encuentran actualmente en el mapa
     public static int currentWaveSize = 0;
 
@@ -103,7 +103,7 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
         OrderData._orderId = orderID++;
         OrderData._orderProduct = PorductNames[rndIt];
         OrderData._price = ProductPrices[rndIt];
-        OrderData._orderTime = 35;
+        OrderData._orderTime = 20;
 
         
         OrderInstance.GetComponent<OrderDetail>()?.InitOrder(OrderData);

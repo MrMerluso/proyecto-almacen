@@ -1715,8 +1715,9 @@ MonoBehaviour:
     hamburguesa\n-A los clientes rojos tienes que entregarle un completo\n-A los
     clientes amarillos tienes que entregarle un queso\n-Puedes comprar cajas con
     productos acerc\xE1ndote al cami\xF3n\n-Las cajas de productos se ponen encima
-    de las cajas rojas dentro del almac\xE9n\n-Perder\xE1s al no realizar 3 ordenes\n-Intenta
-    llegar lo m\xE1s lejos posible"
+    de las cajas azules dentro del almac\xE9n\n-Perder\xE1s al no realizar 3 ordenes\n-Existe
+    la posibilidad de que se compliquen un poco las entregas...\n-Intenta llegar
+    lo m\xE1s lejos posible"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1743,7 +1744,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.05
+  m_fontSize: 24.75
   m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1852,8 +1853,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "-Te mueves con \"ASDW\" \n-Agarras objetos con \"E\"\n-Botas objetos con
-    \"Q\"\n-Bot\xF3n de Interacci\xF3n \"F\"\n-Puedes correr con \"SHIFT\"\n-Puedes
-    saltar con \"Espacio\""
+    \"Q\"\n-Bot\xF3n de Interacci\xF3n \"F\"\n-Puedes saltar con \"Espacio\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

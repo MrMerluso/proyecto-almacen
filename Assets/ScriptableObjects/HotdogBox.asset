@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0959f12d7970fe4a806d6c2925a3f9d, type: 3}
   m_Name: HotdogBox
   m_EditorClassIdentifier: 
-  itemName: Caja de hotdogs
+  itemName: Caja de Completos
   itemPrice: 2500
   Box: {fileID: 354326918694250591, guid: f6cf5eea846a8f14b8e15e0a9ee42221, type: 3}
   BoxContents: {fileID: 6288174197152612051, guid: 2a091eebd74c5e54f83ea72bb013226f, type: 3}

@@ -8,6 +8,7 @@ TagManager:
   - ItemHolder
   - BoxSpawnPoint
   - Client
+  - PurchaseSound
   layers:
   - Default
   - TransparentFX
