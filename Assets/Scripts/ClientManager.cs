@@ -10,6 +10,8 @@ public class ClientManager : MonoBehaviour
     public List<Transform> ClientDestinations;
     public Client Client;
 
+    public Collider clientDespawner;
+
 
     public bool CheckAvalibleSpawns()
     {
@@ -60,6 +62,8 @@ public class ClientManager : MonoBehaviour
             }
         }
     }
+
+    
 
     
 

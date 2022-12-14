@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,7 +26,8 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
     public static float Money = 0;
     public static float totalMoney = 0;
     private float time = 0;
-    private float newOrderTime = 3;
+    private static float newOrderTime = 5;
+    public static float orderTime = 30;
     // cantidad máxima de clientes a spawnear
     public static int clientMaxWaveSize = 99;
     // Cantidad de clientes que se encuentran actualmente en el mapa
@@ -33,6 +35,7 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
 
     public RectTransform Order;
     public RectTransform OrderQueue;
+    public TMP_Text WelcomeText;
 
     public static float timer = 0;
     static bool isRunning = true;
@@ -56,6 +59,8 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
         AllOrders = new List<OrderDetail>();
         ComlpetedOrders = new List<string>();
         FailedOrders = new List<string>();
+        newOrderTime = 5;
+        orderTime = 30;
         Money = 0;
         totalMoney = 0;
         timer = 0;
@@ -63,7 +68,9 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
 
 
     void Start(){
-        InvokeRepeating("CreateOrder", 3.0f, newOrderTime);
+        StartCoroutine(CreateOrder());
+        StartCoroutine(RampingDifficulty());
+        StartCoroutine(RemoveWelcomeText());
     }
 
     private void Update()
@@ -82,36 +89,59 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
         }
     }
 
+    private IEnumerator RemoveWelcomeText()
+    {
+        yield return new WaitForSeconds(7f);
+        WelcomeText.gameObject.SetActive(false);
+    }
+
+    private IEnumerator RampingDifficulty()
+    {
+        yield return new WaitForSeconds(75f);
+        newOrderTime = 4;
+        orderTime = 26;
+        yield return new WaitForSeconds(250f);
+        newOrderTime = 3;
+        orderTime = 23;
+        
+    }
+
     // Creamos una orden con detalles al azar
-    public void CreateOrder(){
+    public IEnumerator CreateOrder(){
 
         // if (!ClientManager.CheckAvalibleSpawns())
         // {
         //     return;
         // }
 
-        Debug.Log("Tring to create an order...");
+        yield return new WaitForSeconds(15f);
 
-        if (currentWaveSize >= clientMaxWaveSize){
-            return;
-        }
-
-        var OrderInstance = Instantiate(Order);
-        var OrderData = new OrderDetail.OrderData();
-        int rndIt = Random.Range(0, PorductNames.Count);
-
-        OrderData._orderId = orderID++;
-        OrderData._orderProduct = PorductNames[rndIt];
-        OrderData._price = ProductPrices[rndIt];
-        OrderData._orderTime = 20;
+        while (true)
+        {
+            yield return new WaitForSeconds(newOrderTime);
+            
+            Debug.Log("Tring to create an order...");
 
         
-        OrderInstance.GetComponent<OrderDetail>()?.InitOrder(OrderData);
-        ClientManager.SpawnClient(OrderInstance.GetComponent<OrderDetail>());
 
-        currentWaveSize++;
+            var OrderInstance = Instantiate(Order);
+            var OrderData = new OrderDetail.OrderData();
+            int rndIt = Random.Range(0, PorductNames.Count);
 
-        OrderInstance.SetParent(OrderQueue);
+            OrderData._orderId = orderID++;
+            OrderData._orderProduct = PorductNames[rndIt];
+            OrderData._price = ProductPrices[rndIt];
+            OrderData._orderTime = orderTime;
+
+            
+            OrderInstance.GetComponent<OrderDetail>()?.InitOrder(OrderData);
+            ClientManager.SpawnClient(OrderInstance.GetComponent<OrderDetail>());
+
+            currentWaveSize++;
+
+            OrderInstance.SetParent(OrderQueue);
+        }
+
     }
 
 

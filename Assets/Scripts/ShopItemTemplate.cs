@@ -21,7 +21,7 @@ public class ShopItemTemplate : MonoBehaviour
     public void PurchaseItem()
     {
         
-        if (int.Parse(ItemPrice.text) >= (int)OrderManager.Money)
+        if (int.Parse(ItemPrice.text) > (int)OrderManager.Money)
         {
             return;
         }

@@ -24,6 +24,7 @@ public class Client : MonoBehaviour
     public AudioSource purchaseSound;
     
     public bool isSpawned = false;
+    public bool isReturning = false;
 
     void Awake()
     {
@@ -57,6 +58,7 @@ public class Client : MonoBehaviour
                 purchaseSound.Play();
                 Spawnpoint.isAvailible = true;
                 navigation.SetDestination(Spawnpoint.transform);
+                isReturning = true;
             }
         }
     }

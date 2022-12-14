@@ -569,10 +569,10 @@ RectTransform:
   m_Father: {fileID: 1171856454}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.05823753, y: 0.019682137}
-  m_AnchorMax: {x: 0.36314735, y: 0.64416003}
-  m_AnchoredPosition: {x: 691, y: 27}
-  m_SizeDelta: {x: 3.0463867, y: -0.30929565}
+  m_AnchorMin: {x: 0.41681254, y: 0.044703707}
+  m_AnchorMax: {x: 0.7245625, y: 0.6701112}
+  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_SizeDelta: {x: -2.9536133, y: -1.3092957}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388084180
 MonoBehaviour:
@@ -1714,10 +1714,10 @@ MonoBehaviour:
     por cada orden entregada\n-A los clientes caf\xE9s tienes que entregarle una
     hamburguesa\n-A los clientes rojos tienes que entregarle un completo\n-A los
     clientes amarillos tienes que entregarle un queso\n-Puedes comprar cajas con
-    productos acerc\xE1ndote al cami\xF3n\n-Las cajas de productos se ponen encima
-    de las cajas azules dentro del almac\xE9n\n-Perder\xE1s al no realizar 3 ordenes\n-Existe
-    la posibilidad de que se compliquen un poco las entregas...\n-Intenta llegar
-    lo m\xE1s lejos posible"
+    productos acerc\xE1ndote a la parte trasera del cami\xF3n\n-Las cajas de productos
+    se ponen encima de las cajas azules dentro del almac\xE9n\n-Perder\xE1s al no
+    realizar 3 ordenes\n-Existe la posibilidad de que se compliquen un poco las entregas...\n-Intenta
+    llegar lo m\xE1s lejos posible"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1827,10 +1827,10 @@ RectTransform:
   m_Father: {fileID: 1053287219}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.192}
-  m_AnchorMin: {x: 0, y: 0.08523449}
-  m_AnchorMax: {x: 1, y: 0.64231735}
-  m_AnchoredPosition: {x: -19.4593, y: 22.0725}
-  m_SizeDelta: {x: -57.7991, y: -24.1171}
+  m_AnchorMin: {x: 0.018601377, y: 0.064549804}
+  m_AnchorMax: {x: 0.97800004, y: 0.655668}
+  m_AnchoredPosition: {x: -1.9075012, y: -1.5628052}
+  m_SizeDelta: {x: -0.87070084, y: 5.264099}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2070339513
 MonoBehaviour:
@@ -1916,7 +1916,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -18.509735, w: -33.673164}
+  m_margin: {x: 0, y: 0, z: -0.6139221, w: -2.156334}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
