@@ -43,7 +43,7 @@ public class RandomEventManager : MonoBehaviour
         //condici?n para que empiece a generar ordenes (m?s adelante tiene que ser en el per?odo de recreos)
         while (true)
         {
-            yield return new WaitForSeconds(15f); //cada x cantidad de segundos
+            yield return new WaitForSeconds(20f); //cada x cantidad de segundos
             Debug.Log("evento");
 
             float randomChance = Random.Range(0f, 1f);

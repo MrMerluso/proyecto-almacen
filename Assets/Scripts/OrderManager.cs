@@ -114,11 +114,10 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
         //     return;
         // }
 
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(20f);
 
         while (true)
         {
-            yield return new WaitForSeconds(newOrderTime);
             
             Debug.Log("Tring to create an order...");
 
@@ -140,6 +139,8 @@ public class OrderManager : MonoBehaviour //este Script va asociado a un gameObj
             currentWaveSize++;
 
             OrderInstance.SetParent(OrderQueue);
+            
+            yield return new WaitForSeconds(newOrderTime);
         }
 
     }
